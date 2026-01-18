@@ -4,6 +4,9 @@ import numpy as np
 import time
 
 # --- SAYFA 1: ANA EKRAN ---
+
+
+# --- SAYFA 1: ANA EKRAN ---
 # EVEYES 360 Ayarları [cite: 2026-01-14]
 
 if sayfa == "Ana Ekran":
