@@ -31,8 +31,8 @@ elif sayfa == "🔬 Biosonology Analiz":
     col1, col2 = st.columns(2)
     st.info(f"{db_degeri} dB için Selçuklu Makam eşleşmesi yapılıyor...")
     
-   with col1:
-        if st.button("Analiz Et"): # 1. Bu satırın sonuna ':' şart
+       with col1:
+            if st.button("Analiz Et"): # 1. Bu satırın sonuna ':' şart
             # 2. Aşağıdaki tüm satırlar bir "Tab" (4 boşluk) İÇERİDE olmalı
              with st.spinner('Frekanslar Selçuklu Arşiviyle Eşleştiriliyor...'):
                 time.sleep(1.5) # Noktayı sildik
@@ -45,7 +45,7 @@ elif sayfa == "🔬 Biosonology Analiz":
                 else:
                     st.error("🚨 Yüksek Stres: Hicaz Makamı önerilir.")
                     st.warning("⚠️ Düşük Rezonans: Hücre enerjisi zayıf. Rehavi Makamı önerilir.")
-    with col2:
+        with col2:
         # Canlı Dalga Formu Simülasyonu
         st.subheader("🔊 Anlık Sonik Dalga")
         chart_data = pd.DataFrame(np.sin(np.linspace(0, 10, 100) * (db_degeri/10)), columns=['Hücre Sesi'])
