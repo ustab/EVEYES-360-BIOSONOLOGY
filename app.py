@@ -8,7 +8,7 @@ import time
 
 # --- SAYFA 1: ANA EKRAN ---
 # EVEYES 360 Ayarları [cite: 2026-01-14]
-
+sayfa = st.sidebar.radio("Gezinti Menüsü", ["📱 Ana Ekran", "🔬 Biosonology Analiz", "📊 Bilimsel Makale"])
 if sayfa == "Ana Ekran":
     st.title(f"🚀 Hoş Geldiniz - {dil}")
     st.write("Abuja 16 Ocak 2026 - Sistem Aktif")
