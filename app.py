@@ -116,4 +116,4 @@ print("SİTE ŞİFRESİ (ENDPOINT IP):")
 print("="*50 + "\n")
 
 # Uygulamayı Başlat
-streamlit run app.py & npx localtunnel --port 8501
+#streamlit run app.py & npx localtunnel --port 8501
