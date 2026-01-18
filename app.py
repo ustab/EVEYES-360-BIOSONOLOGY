@@ -23,13 +23,14 @@ if sayfa == "📱 Ana Ekran":
             st.success("Gönderi EVEYES 360 veritabanına işlendi! [cite: 2026-01-14]")
 
 # --- SAYFA 2: BIOSONOLOGY ANALİZ ---
+
 elif sayfa == "🔬 Biosonology Analiz":
     st.title("🔬 Hücresel Ses ve Desibel Analizi")
     st.markdown("Hücreden gelen sonik veriyi (dB) girerek biyosonolojik durumu analiz edin.")
     db_degeri = st.slider("Hücre Desibel Değeri (dB):", 0, 120, 45)
     col1, col2 = st.columns(2)
     if st.button("Analiz Et"):
-        st.info(f"{db_degeri} dB için Selçuklu Makam eşleşmesi yapılıyor..."
+        st.info(f"{db_degeri} dB için Selçuklu Makam eşleşmesi yapılıyor...")
     
     with col1:
         # Kullanıcıdan Desibel Girişi Alıyoruz
