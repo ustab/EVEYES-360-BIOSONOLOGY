@@ -14,9 +14,11 @@ if sayfa == "Ana Ekran":
     st.write("Abuja 16 Ocak 2026 - Sistem Aktif")
     st.image("https://via.placeholder.com/800x200.png?text=EVEYES+360+Biosonology+Dashboard", use_container_width=True)
     st.set_page_config(page_title="EVEYES 360 - Biosonology", layout="wide")
-    st.sidebar.title("💠 EVEYES 360-BIOSONOLOGY")
-    dil = st.sidebar.selectbox("Dil Seçiniz", ["Türkçe", "English", "Français"])
-    sayfa = st.sidebar.radio("Menü", ["Ana Ekran", "Bilimsel Makale & Frekans", "🔬 Biosonology Analiz", "📊 Bilimsel Veriler"])
+
+# --- SAYFA 1: ANA EKRAN ---   
+    st.sidebar.title("💠 EVEYES 360")
+    dil = st.sidebar.selectbox("Dil Seçiniz", ["Türkçe", "English", "Yoruba", "Français"])
+    sayfa = st.sidebar.radio("Menü", ["📱 Ana Ekran", "🔬 Biosonology Analiz", "📊 Bilimsel Veriler"])
     st.balloons()
     msg = st.text_input("Düşünceni Yaz:")
     if st.button("Sisteme Gönder"):
