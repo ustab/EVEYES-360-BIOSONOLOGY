@@ -27,19 +27,18 @@ if sayfa == "📱 Ana Ekran":
 elif sayfa == "🔬 Biosonology Analiz":
     st.title("🔬 Hücresel Ses ve Desibel Analizi")
     st.markdown("Hücreden gelen sonik veriyi (dB) girerek biyosonolojik durumu analiz edin.")
-    db_degeri = st.slider("Hücre Desibel Değeri (dB):", 0, 120, 45)
+    db_degeri = st.number_input("Hücre Desibel Değeri (dB):", min_value=0, max_value=120, value=45)
     col1, col2 = st.columns(2)
-    if st.button("Analiz Et"):
+
         st.info(f"{db_degeri} dB için Selçuklu Makam eşleşmesi yapılıyor...")
     
     with col1:
-        # Kullanıcıdan Desibel Girişi Alıyoruz
-        db_degeri = st.number_input("Hücre Desibel Değeri (dB):", min_value=0, max_value=120, value=45)
+        if st.button("Analiz Et")
         
-        if st.button("Analiz Et"):
+        Kullanıcıdan Desibel Girişi Alıyoruz
             with st.spinner('Frekanslar Selçuklu Arşiviyle Eşleştiriliyor...'):
                 time.sleep(1.5)
-                
+        
                 if db_degeri < 30:
                     st.warning("⚠️ Düşük Rezonans: Hücre enerjisi zayıf. Rehavi Makamı önerilir.")
                 elif 30 <= db_degeri <= 60:
@@ -80,23 +79,4 @@ elif sayfa == "📊 Bilimsel Makale":
     st.line_chart(chart_data)
     st.caption("Selçuklu makamlarının anlık biosonolojik frekans çıktıları simüle ediliyor.")
 
-   # Satır 83
-with open('app.py', 'w', encoding='utf-8') as f:
-    # Satır 84: MUTLAKA bir Tab veya 4 Boşluk içeride olmalı!
-    f.write(""" 
-import streamlit as st
-import pandas as pd
-# ... kodun geri kalanı
-""")
  
-import os
-# [2026-01-14] Proje ismi EVEYES 360 olarak güncellendi.
-print("\n" + "="*50)
-print("💠 EVEYES 360 - SİTE ŞİFRESİ (ENDPOINT IP):")
-# curl komutu '#' olmadan os.system içinde çalışmalı ki IP'yi çeksin:
-os.system('curl ipv4.icanhazip.com')
-print("="*50 + "\n")
-
-# Uygulamayı Başlat (Arka planda çalışması için komut birleştirildi)
-print("🚀 Sistem Abuja sunucusu üzerinden yayına alınıyor...")
-os.system('streamlit run app.py & npx localtunnel --port 8501')
