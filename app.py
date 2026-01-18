@@ -7,15 +7,15 @@ Original file is located at
     https://colab.research.google.com/drive/1WzZz4vROiAPTVCRKjQoLXWTcDMxxNIni
 """
 
-!pkill -9 streamlit
-!pkill -9 npx
+"""!pkill -9 streamlit
+!pkill -9 npx"""
 
-# 1. Mevcut süreçleri temizleyelim ki çakışma olmasın
+"""# 1. Mevcut süreçleri temizleyelim ki çakışma olmasın
 !pkill streamlit
-!pkill npx
+!pkill npx"""
 
-# 2. Gerekli kütüphaneyi kuralım
-!pip install streamlit -q
+"""# 2. Gerekli kütüphaneyi kuralım
+
 
 import streamlit as st
 import pandas as pd
@@ -150,13 +150,13 @@ elif sayfa == "📊 Bilimsel Analiz (Makale)":
         "Frekans (Hz)": ["432 Hz", "528 Hz", "396 Hz"]
     }
     st.table(pd.DataFrame(data)) # Profesyonel tablo görünümü
-""")
+
 
 # 4. IP Adresini Göster ve Başlat
 print("\n" + "="*50)
 print("SİTE ŞİFRESİ (ENDPOINT IP):")
-!curl ipv4.icanhazip.com
+#curl ipv4.icanhazip.com
 print("="*50 + "\n")
 
 # Uygulamayı Başlat
-!streamlit run app.py & npx localtunnel --port 8501
+#streamlit run app.py & npx localtunnel --port 8501
