@@ -29,7 +29,7 @@ elif sayfa == "🔬 Biosonology Analiz":
     st.markdown("Hücreden gelen sonik veriyi (dB) girerek biyosonolojik durumu analiz edin.")
     db_degeri = st.number_input("Hücre Desibel Değeri (dB):", min_value=0, max_value=120, value=45)
     col1, col2 = st.columns(2)
-            st.info(f"{db_degeri} dB için Selçuklu Makam eşleşmesi yapılıyor...")
+    st.info(f"{db_degeri} dB için Selçuklu Makam eşleşmesi yapılıyor...")
     
    with col1:
         if st.button("Analiz Et"): # 1. Bu satırın sonuna ':' şart
