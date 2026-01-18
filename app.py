@@ -29,29 +29,29 @@ elif sayfa == "🔬 Biosonology Analiz":
     st.markdown("Hücreden gelen sonik veriyi (dB) girerek biyosonolojik durumu analiz edin.")
     db_degeri = st.number_input("Hücre Desibel Değeri (dB):", min_value=0, max_value=120, value=45)
     col1, col2 = st.columns(2)
-
-        st.info(f"{db_degeri} dB için Selçuklu Makam eşleşmesi yapılıyor...")
+            st.info(f"{db_degeri} dB için Selçuklu Makam eşleşmesi yapılıyor...")
     
-    with col1:
-        if st.button("Analiz Et")
-        
-        Kullanıcıdan Desibel Girişi Alıyoruz
-            with st.spinner('Frekanslar Selçuklu Arşiviyle Eşleştiriliyor...'):
-                time.sleep(1.5)
-        
-                if db_degeri < 30:
-                    st.warning("⚠️ Düşük Rezonans: Hücre enerjisi zayıf. Rehavi Makamı önerilir.")
+   with col1:
+        if st.button("Analiz Et"): # 1. Bu satırın sonuna ':' şart
+            # 2. Aşağıdaki tüm satırlar bir "Tab" (4 boşluk) İÇERİDE olmalı
+             with st.spinner('Frekanslar Selçuklu Arşiviyle Eşleştiriliyor...'):
+                time.sleep(1.5) # Noktayı sildik
+                # Analiz sonuçları da butonun içinde kalmalı
+             
+                if 30 <= db_degeri <= 60:
+                    st.success("✅ Dengeli Rezonans: Rast Makamı önerilir.")
                 elif 30 <= db_degeri <= 60:
                     st.success("✅ Dengeli Rezonans: Hücre sağlıklı titreşiyor. Rast Makamı ile desteklenebilir.")
                 else:
-                    st.error("🚨 Yüksek Stres: Hücrede termal stres belirtisi. Hicaz Makamı ile yatıştırılmalı.")
+                    st.error("🚨 Yüksek Stres: Hicaz Makamı önerilir.")
+                    st.warning("⚠️ Düşük Rezonans: Hücre enerjisi zayıf. Rehavi Makamı önerilir.")
     with col2:
         # Canlı Dalga Formu Simülasyonu
         st.subheader("🔊 Anlık Sonik Dalga")
         chart_data = pd.DataFrame(np.sin(np.linspace(0, 10, 100) * (db_degeri/10)), columns=['Hücre Sesi'])
         st.line_chart(chart_data)
         
-# --- SAYFA 3: BİLİMSEL MAKALE ---
+        # --- SAYFA 3: BİLİMSEL MAKALE ---
 
 elif sayfa == "📊 Bilimsel Makale":
     st.title("📄 Bilimsel Makale ve Frekans Verileri")
@@ -78,5 +78,4 @@ elif sayfa == "📊 Bilimsel Makale":
     chart_data = pd.DataFrame(np.random.randn(20, 3), columns=['Rast', 'Rehavi', 'Hicaz'])
     st.line_chart(chart_data)
     st.caption("Selçuklu makamlarının anlık biosonolojik frekans çıktıları simüle ediliyor.")
-
  
