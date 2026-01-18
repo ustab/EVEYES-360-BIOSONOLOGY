@@ -80,12 +80,15 @@ elif sayfa == "📊 Bilimsel Makale":
     st.line_chart(chart_data)
     st.caption("Selçuklu makamlarının anlık biosonolojik frekans çıktıları simüle ediliyor.")
 
-    with open('app.py', 'w', encoding='utf-8') as f:
-    f.write("""
-    import streamlit as st
-    import pandas as pd
-    import numpy as np""")
-
+   # Satır 83
+with open('app.py', 'w', encoding='utf-8') as f:
+    # Satır 84: MUTLAKA bir Tab veya 4 Boşluk içeride olmalı!
+    f.write(""" 
+import streamlit as st
+import pandas as pd
+# ... kodun geri kalanı
+""")
+ 
 import os
 # [2026-01-14] Proje ismi EVEYES 360 olarak güncellendi.
 print("\n" + "="*50)
