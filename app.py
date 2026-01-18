@@ -56,9 +56,36 @@ elif sayfa == "📊 Bilimsel Makale":
     st.title("📄 Bilimsel Makale ve Frekans Verileri")
     # [2026-01-15] Makale içeriği: Seslerin hücreye etkisi ve Selçuklu psikoterapisi.
     st.markdown("""
-    ### Selçuklu Tıbbı ve Biosonoloji
-    Bu makale, seslerin canlı hücreler üzerindeki etkilerini ve Selçuklu dönemi müzik psikoterapisi 
-    verilerini biosonoloji ile birleştirmektedir. [cite: 2026-01-15]
+    ### Acoustic Healing from Seljuk Medicine to Modern Biosonology
+This article has been structured in a professional format, adhering to the provided scientific resources to reflect the core values of the EVEYES 360 project and the science of biosonology.
+
+🚀 Ancient Seljuk Medicine Reborn with Modern Biosonology: EVEYES 360 💠
+EVEYES 360 is a digital portal grounded in the science of biosonology, aiming to optimize cellular resonance by integrating ancient Seljuk medical traditions with modern technology. [1], [2] [cite: 2026-01-14]
+
+The Science of Biosonology and Cellular Sounds
+Biosonology has identified that every living cell emits a unique frequency of sound and has experimentally proven the effects of these sounds on biological processes. [1]
+
+Cellular Efficiency: Experiments have observed that when yeast cells are played back the sounds they naturally produce, their reproductive efficiency increases significantly. [1]
+
+Disease and Chaos: Sound frequencies shift according to the health status of cells. For instance, it has been detected that cancer cells produce a chaotic noise, unlike the harmonious frequencies of healthy cells. [1]
+
+A 1000-Year Healing Legacy: Seljuk Music Therapy
+Beginning nearly a millennium ago, Seljuk medicine utilized music—which has healing effects on cells—to treat psychiatric disorders. [1] [cite: 2026-01-15]
+
+Inspiration and Development: These musical forms were inspired by the melodic structures of the Holy Quran and were developed into systematic treatment methods by scholars such as Avicenna (Ibn Sina) and Al-Farabi. [1]
+
+Concentration vs. Music: According to Al-Farabi, while the recitation of the Holy Quran provides positive effects, it requires concentration to be beneficial. In contrast, music therapy exerts healing effects on cells even without the patient’s active concentration. [2]
+
+Cellular Resonance and Acoustic Medicine
+Today, the EVEYES 360 portal brings the effects of traditional Seljuk "Maqams"—such as Rast, Rehavi, and Hicaz—into the digital world through scientific modeling. [2] [cite: 2026-01-15] This approach aims to provide:
+
+DNA repair and reduction of cellular stress levels. [2]
+
+Optimization of cellular resonance across a broad spectrum. [2]
+
+A robust bridge to the "acoustic medicine" of the future. [2]
+
+Through biosonology, we rediscover that science is found not only in laboratories but also in the harmony of frequencies and the depths of history. [2]
     """)
     # Frekans Tablosu
     data = {"Makam": ["Rast", "Rehavi", "Hicaz"], "Frekans": ["432 Hz", "528 Hz", "396 Hz"]}
