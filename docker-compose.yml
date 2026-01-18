@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  eveyes360:
+    image: python:3.10-slim
+    container_name: eveyes_final
+    working_dir: /app
+    volumes:
+      - .:/app
+    ports:
+      - "5000:5000"
+    command: >
+      sh -c "apt-get update && apt-get install -y libsndfile1 &&
+             pip install flask numpy scipy &&
+             python app.py"
+    restart: always

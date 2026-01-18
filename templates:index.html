@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>EVEYES 360 - Biyosonoloji Paneli</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background: #eceff1; margin: 0; padding: 20px; }
+        .container { max-width: 1000px; margin: auto; background: white; padding: 20px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        h1 { color: #2c3e50; border-left: 5px solid #27ae60; padding-left: 10px; }
+        .form-group { background: #f9f9f9; padding: 15px; border-radius: 10px; margin-bottom: 20px; }
+        input { padding: 10px; border: 1px solid #ddd; border-radius: 5px; width: 200px; }
+        button { padding: 10px 20px; background: #27ae60; color: white; border: none; border-radius: 5px; cursor: pointer; }
+        .audio-section { margin: 20px 0; padding: 10px; background: #e8f5e9; border-radius: 10px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🏥 EVEYES 360 | Şifahane Analiz Sistemi</h1>
+        
+        <div class="form-group">
+            <form action="/kaydet" method="POST">
+                <input type="text" name="hasta_adi" placeholder="Hasta/Hücre Adı" required>
+                <input type="number" name="desibel" placeholder="Desibel (0-120)" min="0" max="120" required>
+                <button type="submit">Analiz Et ve Kaydet</button>
+            </form>
+        </div>
+
+        <div class="audio-section">
+            <strong>Son Analiz Edilen Hücre Sesi (Biyosonoloji):</strong><br>
+            <audio controls src="/static/hucre_sesi.wav" style="width: 100%; margin-top: 10px;"></audio>
+        </div>
+
+        <canvas id="analizGrafigi"></canvas>
+    </div>
+
+    <script>
+        var ctx = document.getElementById('analizGrafigi').getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: {{ isim_listesi|tojson }},
+                datasets: [{
+                    label: 'Hücre Titreşimi (dB)',
+                    data: {{ db_listesi|tojson }},
+                    borderColor: '#27ae60',
+                    fill: false,
+                    pointBackgroundColor: function(c) { return c.dataset.data[c.dataIndex] > 100 ? 'red' : '#27ae60'; }
+                }]
+            }
+        });
+    </script>
+</body>
+</html>
