@@ -5,16 +5,16 @@ import time
 
 # --- SAYFA 1: ANA EKRAN ---
 # EVEYES 360 Ayarları [cite: 2026-01-14]
-st.set_page_config(page_title="EVEYES 360 - Biosonology", layout="wide")
-
-st.sidebar.title("💠 EVEYES 360-BIOSONOLOGY")
-dil = st.sidebar.selectbox("Dil Seçiniz", ["Türkçe", "English", "Français"])
-sayfa = st.sidebar.radio("Menü", ["Ana Ekran", "Bilimsel Makale & Frekans", "🔬 Biosonology Analiz", "📊 Bilimsel Veriler"])
 
 if sayfa == "Ana Ekran":
     st.title(f"🚀 Hoş Geldiniz - {dil}")
     st.write("Abuja 16 Ocak 2026 - Sistem Aktif")
     st.image("https://via.placeholder.com/800x200.png?text=EVEYES+360+Biosonology+Dashboard", use_container_width=True)
+    st.set_page_config(page_title="EVEYES 360 - Biosonology", layout="wide")
+
+st.sidebar.title("💠 EVEYES 360-BIOSONOLOGY")
+dil = st.sidebar.selectbox("Dil Seçiniz", ["Türkçe", "English", "Français"])
+sayfa = st.sidebar.radio("Menü", ["Ana Ekran", "Bilimsel Makale & Frekans", "🔬 Biosonology Analiz", "📊 Bilimsel Veriler"])
     
     # Hareketli bir karşılama
     st.balloons()
