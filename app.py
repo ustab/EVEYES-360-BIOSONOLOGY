@@ -3,16 +3,14 @@ import pandas as pd
 import numpy as np
 import time
 
-# --- SAYFA 1: ANA EKRAN ---
-# EVEYES 360 Ayarları [cite: 2026-01-14]
+# --- SAYFA 1: ANA EKRAN ---   
+
 sayfa = st.sidebar.radio("Gezinti Menüsü", ["📱 Ana Ekran", "🔬 Biosonology Analiz", "📊 Bilimsel Makale"])
 if sayfa == "Ana Ekran":
     st.title(f"🚀 Hoş Geldiniz - {dil}")
     st.write("Abuja 16 Ocak 2026 - Sistem Aktif")
     st.image("https://via.placeholder.com/800x200.png?text=EVEYES+360+Biosonology+Dashboard", use_container_width=True)
     st.set_page_config(page_title="EVEYES 360 - Biosonology", layout="wide")
-
-# --- SAYFA 1: ANA EKRAN ---   
     st.sidebar.title("💠 EVEYES 360")
     dil = st.sidebar.selectbox("Dil Seçiniz", ["Türkçe", "English", "Yoruba", "Français"])
     sayfa = st.sidebar.radio("Menü", ["📱 Ana Ekran", "🔬 Biosonology Analiz", "📊 Bilimsel Veriler"])
