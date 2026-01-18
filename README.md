@@ -1,4 +1,5 @@
 🏥 EVEYES 360: Digital Healing & Biosonology Platform
+
 "If cells had a voice, how would you heal them?"
 EVEYES 360 is a pioneering Biosonology Analysis and Therapy Management Platform that bridges the gap between modern microbiological data and the thousand-year-old medical heritage of the Seljuk Era. It transforms laboratory data from mere numbers into tangible acoustic evidence and healing resonance.
 ✨ Key Features
@@ -27,3 +28,6 @@ This is a modular project. Future updates will include:
  * Mobile Portal: Real-time monitoring for healthcare professionals.
 🎓 Author
 Developed with the vision of combining historical wisdom with future technology.
+
+
+
